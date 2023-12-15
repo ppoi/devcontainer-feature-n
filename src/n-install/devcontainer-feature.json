@@ -2,7 +2,7 @@
     "id": "n-insall",
     "version": "1.0.0",
     "name": "n:Node version management",
-    "documentationURL": "https://github.com/ppoi/devcontainer-feature-n",
+    "documentationURL": "https://github.com/ppoi/devcontainer-feature-n-install",
     "description": "install n:Node version management from n-install script",
     "options": {
         "version": {
