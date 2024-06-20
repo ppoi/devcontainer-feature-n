@@ -1,0 +1,30 @@
+{
+    "id": "cacert",
+    "version": "1.0.0",
+    "name": "additional cacert",
+    "documentationURL": "https://github.com/ppoi/devcontainer-features/tree/main/src/cacert",
+    "description": "install CA cert to Container & JVM defautl keystore",
+    "options": {
+        "cert": {
+            "default": "",
+            "description": "X.509 CA cert content",
+            "type": "string"
+        },
+        "certUrl": {
+            "default": "",
+            "description": "X.509 CA cert URL",
+            "type": "string"
+        },
+        "jvm": {
+            "default": false,
+            "description": "install CA cert to JVM",
+            "type": "boolean"
+        },
+        "jvm-keystore-pass": {
+            "default": "changeit",
+            "description": "JVM keystore passphrase",
+            "type": "string"
+        }
+    },
+    "installsAfter": []
+}

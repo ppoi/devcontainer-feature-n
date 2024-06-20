@@ -1,9 +1,24 @@
 {
-  "name": "type-zulu",
-  "image": "ghcr.io/ppoi/devcontainer-images/base:latest",
+  "name": "devcontainer-features",
+  "image": "ghcr.io/ppoi/devcontainer-images/type-alpha:latest",
   "containerUser": "vscode",
-  "capAdd": ["AUDIT_WRITE", "NET_RAW"],
+  "capAdd": ["AUDIT_WRITE"],
+  "mounts": [{"source": "/run/podman/podman.sock", "target": "/var/run/docker.sock", "type": "bind"}],
   "postCreateCommand": {
-    "dood": "sudo chgrp docker /var/run/docker.sock"
+    "dood": "sudo chgrp docker /var/run/docker.sock",
+    "devcontainer-cli": "sudo npm i -g @devcontainers/cli"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.useTabStops": false
+      }
+    }
   }
 }
