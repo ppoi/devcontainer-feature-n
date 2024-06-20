@@ -5,6 +5,11 @@
     "documentationURL": "https://github.com/ppoi/devcontainer-features/tree/main/src/cacert",
     "description": "install CA cert to Container & JVM defautl keystore",
     "options": {
+        "caNmae": {
+            "default": "",
+            "description": "name of CA",
+            "type": "string"
+        },
         "cert": {
             "default": "",
             "description": "X.509 CA cert content",
