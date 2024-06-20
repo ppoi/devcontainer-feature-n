@@ -20,7 +20,7 @@ echo "install CA cert: ${CANAME}"
 echo ${CERT_DATA} | sudo tee "/usr/local/share/ca-certificates/${CANAME}.crt"
 sudo update-ca-certificates
 
-if [ "${JVM}" -eq "true" && (which keytool) ]; then
+if [ "${JVM}" = "true" ] && which keytool > /dev/null; then
   echo "install CA cert into JVM default keystore."
   sudo keytool -cacerts -import -alias ${CANAME} -storepass "${JVM_KEYSTORE_PASS:-"changeit"}" -f "/usr/local/share/ca-certificates/${CANAME}.crt"
 fi
