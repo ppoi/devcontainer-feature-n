@@ -4,8 +4,10 @@
   "containerUser": "vscode",
   "capAdd": ["AUDIT_WRITE"],
   "mounts": [{"source": "/run/podman/podman.sock", "target": "/var/run/docker.sock", "type": "bind"}],
+  "postStartCommand": {
+    "dood": "sudo chgrp docker /var/run/docker.sock"
+  },
   "postCreateCommand": {
-    "dood": "sudo chgrp docker /var/run/docker.sock",
     "devcontainer-cli": "sudo npm i -g @devcontainers/cli"
   },
   "customizations": {
