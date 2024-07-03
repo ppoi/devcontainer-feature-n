@@ -9,10 +9,7 @@ echo "install CA certification named ${CANAME}"
 CERT_DATA=""
 if [ ! -z "${CERT}" ]; then
   echo "use inline certification"
-  CERT_DATA=${CERT}
-elif [ -f "${CERT_FILE}" ]; then
-  echo "certification file: ${CERT_FILE} in $(cd `dirname .`;pwd)"
-  CER_DATA=$(cat "${CERT_FILE}");
+  CERT_DATA=$(echo "-----BEGIN CERTIFICATE-----\n${CERT}\n-----END CERTIFICATE-----")
 elif [ ! -z "${CERT_URL}" ]; then
   echo "certification url: ${CERT_URL}"
   CERT_DATA=$(curl -kL ${CERT_URL})

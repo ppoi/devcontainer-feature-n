@@ -15,11 +15,6 @@
             "description": "X.509 CA cert content",
             "type": "string"
         },
-        "cert-file": {
-            "default": "",
-            "description": "X.509 CA cert File path",
-            "type": "string"
-        },
         "cert-url": {
             "default": "",
             "description": "X.509 CA cert URL",
