@@ -21,7 +21,7 @@ if [ -z "${CERT_DATA}" ]; then
 fi
 
 echo "install CA cert: ${CANAME}"
-echo ${CERT_DATA} | tee "/usr/local/share/ca-certificates/${CANAME}.crt"
+echo "${CERT_DATA}" | tee "/usr/local/share/ca-certificates/${CANAME}.crt"
 update-ca-certificates
 
 if [ "${JVM}" = "true" ] && which keytool > /dev/null; then

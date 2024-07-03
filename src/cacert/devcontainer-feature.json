@@ -1,6 +1,6 @@
 {
     "id": "cacert",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "additional cacert",
     "documentationURL": "https://github.com/ppoi/devcontainer-features/tree/main/src/cacert",
     "description": "install CA cert to Container & JVM defautl keystore",
